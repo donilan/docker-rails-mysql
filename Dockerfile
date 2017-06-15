@@ -1,8 +1,8 @@
 FROM ruby:2.3.4
 
 ENV BUILD_PACKAGES="bash curl tzdata ca-certificates wget less ssh" \
-    DEV_PACKAGES="ruby-dev libc-dev libffi-dev libmysqlclient-dev libpq-dev libsqlite3-dev libxml2-dev libxslt-dev" \
-    RUBY_PACKAGES="mysql-client postgresql-client sqlite3 nodejs git openssl" \
+    DEV_PACKAGES="ruby-dev libc-dev libffi-dev libmysqlclient-dev libxml2-dev libxslt-dev" \
+    RUBY_PACKAGES="mysql-client nodejs git openssl" \
     GEM_HOME=/app/bundle \
     BUNDLE_PATH=/app/bundle \
     BUNDLE_APP_CONFIG=/app/bundle \
