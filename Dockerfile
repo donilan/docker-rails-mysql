@@ -2,7 +2,7 @@ FROM ruby:2.4.1
 
 ENV BUILD_PACKAGES="bash curl tzdata ca-certificates wget less ssh" \
     DEV_PACKAGES="ruby-dev libc-dev libffi-dev libmysqlclient-dev libxml2-dev libxslt-dev" \
-    RUBY_PACKAGES="mysql-client git openssl nodejs npm" \
+    RUBY_PACKAGES="mysql-client git openssl" \
     GEM_HOME=/app/bundle \
     BUNDLE_PATH=/app/bundle \
     BUNDLE_APP_CONFIG=/app/bundle \
@@ -15,6 +15,8 @@ RUN set -ex \
     $BUILD_PACKAGES \
     $DEV_PACKAGES \
     $RUBY_PACKAGES \
+    && curl -sL https://deb.nodesource.com/setup | sudo bash - \
+    && apt-get -y install python build-essential nodejs \
     && npm install -g yarn \
     && mkdir -p "$APP" "$GEM_HOME/bin" \
     && { \
