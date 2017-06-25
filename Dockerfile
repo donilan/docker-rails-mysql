@@ -15,7 +15,7 @@ RUN set -ex \
     $BUILD_PACKAGES \
     $DEV_PACKAGES \
     $RUBY_PACKAGES \
-    && curl -sL https://deb.nodesource.com/setup | bash - \
+    && curl -sL https://deb.nodesource.com/setup_6.x | bash -
     && apt-get -y install python build-essential nodejs \
     && npm install -g yarn \
     && mkdir -p "$APP" "$GEM_HOME/bin" \
