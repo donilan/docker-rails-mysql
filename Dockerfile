@@ -26,9 +26,9 @@ RUN set -ex \
     && mkdir ~/.ssh \
     && chmod 700 ~/.ssh
 
-RUN gem install bundle
-RUN gem install rails -v '~> 5.0.2'
-RUN gem install nokogiri -v '>= 1.5.9'
+RUN gem install bundler
+RUN gem install rails -v '~> 5.1.1'
+# RUN gem install nokogiri -v '>= 1.5.9'
 
 WORKDIR $APP
 
