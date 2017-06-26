@@ -30,7 +30,7 @@ RUN set -ex \
 
 RUN gem install bundler
 RUN gem install rails -v '~> 5.1.1'
-RUN gem install nokogiri -v '>= 1.6.8'
+RUN gem install backup -v '~> 4.4.0'
 
 WORKDIR $APP
 
