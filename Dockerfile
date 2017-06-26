@@ -1,4 +1,4 @@
-FROM ruby:2.4.1
+FROM ruby:2.3.4
 
 ENV BUILD_PACKAGES="bash curl tzdata ca-certificates wget less ssh" \
     DEV_PACKAGES="ruby-dev libc-dev libffi-dev libmysqlclient-dev libxml2-dev libxslt-dev libgmp3-dev" \
